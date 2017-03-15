@@ -219,7 +219,7 @@ body {
 #menu-inner a {
 	text-decoration: none;
 	color: #7a7a7a;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	margin: 0 .4rem;
 	padding: 0
 }
@@ -239,7 +239,7 @@ body {
 .info .blog-title {
 	color: #606060;
 	font-size: 2rem;
-	margin: .8rem 0 0 0;
+	margin: .8rem 0 .8rem 0;
 	font-weight: 700
 }
 
@@ -274,7 +274,7 @@ body {
 }
 
 .publish-time {
-	float: left
+	float: right
 }
 
 .pagination {
@@ -379,7 +379,9 @@ body {
 }
 
 .recent-post-item p {
-	color: #2d2d2d
+	color: #2d2d2d;
+	text-indent: 2rem;
+	line-height: 1.7rem
 }
 
 .gutter {
