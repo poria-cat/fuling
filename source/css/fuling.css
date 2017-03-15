@@ -467,6 +467,10 @@ template {
 a {
     text-decoration: none;
 }
+
+body {
+overflow-x: hidden
+}
 #menu-outer {
     height: 2rem;
     width: 100%;
