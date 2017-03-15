@@ -1,0 +1,20 @@
+
+<% if (site.posts.length > 0) { %>
+  <div id="recent-posts">
+    <% page.posts.each(function(post){ %>
+      <div class="recent-post-item">
+        <a class="post-title" href="<%=config.root + post.path%>"><%=post.title%></a>
+          <!--<p><%- post.describing  %></p>-->
+          <p><%- truncate(strip_html(post.content), {length: 150, omission: '..'}) %></p>
+          <% if (post.date) { %>
+          <div class="blog-meta">
+            <time class="publish-time" datetime="<%=post.date.toJSON()%>">
+            <%=date(post.date)%>
+          </time>
+          <div class="clearfloat"></div> 
+          </div>
+        <% } %>
+      </div>
+    <% }); %>
+  </div> 
+<% } %>

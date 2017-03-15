@@ -1,0 +1,41 @@
+
+  <div class="archive-content">
+    <% var last; %>
+  <% page.posts.each(function(post, i){ %>
+    <% var year = post.date.year(); %>
+    <% if (last != year){ %>
+      <% if (last != null){ %>
+        </div></section>
+      <% } %>
+      <% last = year; %>
+        <div id="archive">
+          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+        </div>
+        <div class="archives">
+    <% } %>
+    <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+  <% }) %>
+  <% if (page.posts.length){ %>
+    </div>
+  <% } %>
+  </div>
+
+
+<div class="pagination">
+  <div class="archive-pageination">
+     <% if (page.prev) { %>
+    <a  href="<%=url_for(page.prev_link)%>" class="previous">&larr; <%- __('prev')%> </a>
+  <% } else if (page.prev && page.prev.path) { %>
+    <a href="<%=url_for(page.prev.path)%>" class="previous">&larr; <%- __('prev')%> </a>
+  <% } %>
+
+
+
+  <% if (page.next) { %>
+    <a  href="<%=url_for(page.next_link)%>" class="next"><%- __('next')%> &rarr;</a>
+  <% } else if (page.next && page.next.path) { %>
+    <a href="<%=url_for(page.next.path)%>" class="next"><%- __('next')%> &rarr;</a>
+  <% } %>
+  </div>
+</div>
+

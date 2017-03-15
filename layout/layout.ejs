@@ -1,0 +1,69 @@
+
+<%
+var pageTitle = page.title || config.subtitle || '';
+if (is_archive()) pageTitle = 'Archives';
+if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+if (is_category()) pageTitle = 'Category: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' [ ' + config.title + ' ]';
+%>
+
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%=pageTitle%></title>
+  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <!-- stylesheets list from config.yml -->
+    <% theme.stylesheets.forEach(function(url) { %>
+      <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+  <% } %>
+  <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+<link href="http://cdn.bootcss.com/highlight.js/8.5/styles/github.min.css" rel="stylesheet">
+<script src="http://cdn.bootcss.com/highlight.js/8.5/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+</head>
+<body>
+ 
+<div id="menu-outer">
+  <div id="menu-inner">
+    
+    <% /*console.log(config) */%>
+    <% /*Object.keys(theme.menu).forEach(function(key) { %>
+      <a href="<%=theme.menu[key]%>"><%=key%></a>
+    <% });*/ %>
+    
+      <a href="<%=config.root%>">主页</a>
+      <a href="/about">关于</a>
+      <a href="/archives">归档</a>
+      
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    <%- body %>
+  </div>
+</div>
+
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    Powered with <a href="http://hexo.io">Hexo </a> , Theme by 茯苓猫 with &hearts;
+    
+  </div>
+</div>
+
+<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+  <!-- scripts list from theme config.yml -->
+  <% theme.scripts.forEach(function(url) { %>
+    <script src="<%=url%>"></script>
+  <% }); %>
+<% } %>
+
+
+</body>
+</html>
