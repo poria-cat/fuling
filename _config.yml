@@ -12,12 +12,4 @@ menu:
 # Miscelaneous
 favicon: /favicon.ico
 
-# stylesheets loaded in the <head>
-stylesheets:
-- /css/fuling.css
-
-# scripts loaded in the end of the body
-scripts:
-- /js/fuling.js
-
 avatar: /avatar.png

@@ -1,3 +1,5 @@
+hljs.initHighlightingOnLoad(); 
+
 hljs.configure({useBR: true});
 
 $('td.code').each(function(i, block) {

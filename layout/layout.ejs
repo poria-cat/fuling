@@ -16,16 +16,10 @@ pageTitle += ' [ ' + config.title + ' ]';
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title><%=pageTitle%></title>
-  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
-    <!-- stylesheets list from config.yml -->
-    <% theme.stylesheets.forEach(function(url) { %>
-      <link rel="stylesheet" href="<%=url%>">
-    <% }); %>
-  <% } %>
-  <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
-<link href="http://cdn.bootcss.com/highlight.js/8.5/styles/github.min.css" rel="stylesheet">
-<script src="http://cdn.bootcss.com/highlight.js/8.5/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script> 
+  <%- css('css/fuling.min.css') %>
+  <%- js('js/zepto.min.js') %>
+  <%- css('css/github.min.css"') %>
+  <%- js('js/highlight.min.js') %>
 </head>
 <body>
  
@@ -52,18 +46,11 @@ pageTitle += ' [ ' + config.title + ' ]';
 
 <div id="bottom-outer">
   <div id="bottom-inner">
-    Powered with <a href="http://hexo.io">Hexo </a> , Theme by 茯苓猫 with &hearts;
+    Powered with <a href="http://hexo.io">Hexo </a> , Theme by <a href="https://elven.coding.me">茯苓猫</a> with &hearts;
     
   </div>
 </div>
 
-<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-  <!-- scripts list from theme config.yml -->
-  <% theme.scripts.forEach(function(url) { %>
-    <script src="<%=url%>"></script>
-  <% }); %>
-<% } %>
-
-
+<%- js('js/fuling.js') %>
 </body>
 </html>
