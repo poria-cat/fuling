@@ -244,6 +244,10 @@ body {
 	margin: .1rem 0
 }
 
+#recent-posts {
+	margin-top: 2rem;
+}
+
 #content-inner {
 	text-align: center;
 	max-width: 760px;
@@ -272,9 +276,11 @@ body {
 }
 
 .publish-time {
+	float: left
+}
+.read-more {
 	float: right
 }
-
 .pagination {
 	margin: 2rem 0 4rem 0;
 	padding: 0
@@ -351,12 +357,22 @@ body {
 .post-date,.publish-time {
 	margin-top: .5rem;
 	margin-bottom: 3rem;
-	color: #474747
+	color: #474747;
+}
+
+.read-more a {
+	color: #474747;
+}
+
+.post-date,.publish-time,.read-more:hover {
+	cursor: pointer;
 }
 
 .post-content {
 	font-size: 1.3rem;
-	color: #2d2d2d
+	color: #2d2d2d;
+	text-indent: 2rem;
+	
 }
 
 .post-content a {
@@ -378,7 +394,6 @@ body {
 
 .recent-post-item p {
 	color: #2d2d2d;
-	text-indent: 2rem;
 	line-height: 1.7rem
 }
 
