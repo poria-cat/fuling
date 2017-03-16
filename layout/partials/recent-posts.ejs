@@ -3,7 +3,7 @@
   <div id="recent-posts">
     <% page.posts.each(function(post){ %>
       <div class="recent-post-item">
-        <a class="post-title" href="<%=config.root + post.path%>"><%=post.title%></a>
+        <a class="post-index-title" href="<%=config.root + post.path%>"><%=post.title%></a>
           <!--<p><%- post.describing  %></p>-->
           <p><%- truncate(strip_html(post.content), {length: 150, omission: '..'}) %></p>
           <% if (post.date) { %>

@@ -123,15 +123,12 @@ button,input {
 
 button,select {
 	text-transform: none
-}
-[type=reset],[type=submit],button,html [type=button] {
+}[type=reset],[type=submit],button,html [type=button] {
 	-webkit-appearance: button
-}
-[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner {
+}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner {
 	border-style: none;
 	padding: 0
-}
-[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring {
+}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring {
 	outline: 1px dotted ButtonText
 }
 
@@ -157,19 +154,15 @@ progress {
 
 textarea {
 	overflow: auto
-}
-[type=checkbox],[type=radio] {
+}[type=checkbox],[type=radio] {
 	box-sizing: border-box;
 	padding: 0
-}
-[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button {
+}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button {
 	height: auto
-}
-[type=search] {
+}[type=search] {
 	-webkit-appearance: textfield;
 	outline-offset: -2px
-}
-[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration {
+}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration {
 	-webkit-appearance: none
 }
 
@@ -192,11 +185,11 @@ canvas {
 
 template {
 	display: none
-}
-[hidden] {
+}[hidden] {
 	display: none
 }
 
+/*here is main css*/
 a {
 	text-decoration: none
 }
@@ -223,7 +216,9 @@ body {
 	margin: 0 .4rem;
 	padding: 0
 }
-
+#menu-inner a:hover {
+    border-bottom: 2px dashed #7a7a7a
+}
 .info {
 	margin-top: 6rem;
 	text-align: center;
@@ -262,10 +257,13 @@ body {
 	overflow: hidden
 }
 
-.post-title {
+.post-title,.post-index-title {
 	color: #606060;
 	text-decoration: none;
 	font-size: 1.8rem
+}
+.post-index-title:hover {
+    border-bottom: 2px dashed #606060;
 }
 
 .recent-post-item p {
@@ -385,12 +383,12 @@ body {
 }
 
 .gutter {
-	border-right: 1px solid #C3CCD0;
+	border-right: 1px solid #c3ccd0;
 	border-radius: 3px 0 0 3px;
-	background-color: #EEE;
+	background-color: #eee;
 	text-align: right;
 	font-family: Menlo,monospace;
-	color: #AAA
+	color: #aaa
 }
 
 .highlight {
