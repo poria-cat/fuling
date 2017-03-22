@@ -195,7 +195,10 @@ a {
 }
 
 body {
-	overflow-x: hidden
+	overflow-x: hidden;
+	font-family: Arial,Verdana,arial,serif;
+	font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+	font-family: monospace, sans-serif;
 }
 
 #menu-outer {
@@ -371,8 +374,6 @@ body {
 .post-content {
 	font-size: 1.3rem;
 	color: #2d2d2d;
-	text-indent: 2rem;
-	
 }
 
 .post-content a {
@@ -432,4 +433,36 @@ body {
 	.archive-pageination {
 		margin-top: 4rem
 	}
+
+
+}
+
+
+.about-page,.links-page {
+	margin-top: 6rem;
+	max-width: 800px;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+}
+.about-page a{
+	padding-right: 2rem
+}
+
+.about-title,.about-content,.about-content a,.links-page,.links-content a {
+	color: #7a7a7a
+}
+
+.about-content {
+	font-size: 1.2rem;
+	line-height: 1.8rem
+}
+
+.links-content a {
+	font-size: 1.2rem;
+	line-height: 2em
+}
+.links-content a:hover {
+	border-bottom: 2px dashed #606060
 }

@@ -15,6 +15,7 @@ https://elven.coding.me
 
 `
     cd themes/fuling
+    
     git pull https://github.com/Elvenisboy/fuling.git
 `
 ## 首页头像设置
